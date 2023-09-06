@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://MeshInstance.gd" type="Script" id=1]
+[ext_resource path="res://Labe_speedl.gd" type="Script" id=2]
+[ext_resource path="res://Position3DCam.gd" type="Script" id=3]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 1
+background_color = Color( 0.2, 0.2, 0.2, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 2.90386, 0, 0, 0, 0.0346082, 0, 0, 0, 2.90386, 0, -1.28994, 0 )
+mesh = SubResource( 1 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011302, 2.76454, 2.18506 )
+
+[node name="OmniLight3" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011302, -2.87894, 2.18506 )
+light_color = Color( 0.152941, 0.835294, 0.945098, 1 )
+light_energy = 0.5
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64176, 1.89415, -4.29641 )
+light_color = Color( 0.960784, 0.0470588, 0.0470588, 1 )
+light_energy = 3.055
+
+[node name="UserInt" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="UserInt"]
+margin_left = 10.0
+margin_top = 10.0
+text = "Speed: none"
+script = ExtResource( 2 )
+
+[node name="Position3D" type="Position3D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="Position3D"]
+transform = Transform( 1, 0, 0, 0, 0.879698, 0.475532, 0, -0.475532, 0.879698, 0, 1.74228, 3.46987 )
+environment = SubResource( 2 )
+fov = 100.0
+
+[node name="GUI" parent="." instance=ExtResource( 4 )]

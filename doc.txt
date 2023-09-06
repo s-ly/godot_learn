@@ -1,0 +1,4 @@
+Pong - учебный проект, версия Godot_v3.5.2-stable_win64.exe
+https://www.youtube.com/watch?v=kr1BoEbuveI
+https://youtu.be/kr1BoEbuveI?si=Q7kPxFMK7If3zdcE&t=2353
+--------------------------

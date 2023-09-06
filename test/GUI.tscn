@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="GUI" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 61.0
+margin_top = 412.0
+margin_right = 127.0
+margin_bottom = 426.0
+text = "Other text"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 153.0
+margin_top = 410.0
+margin_right = 237.0
+margin_bottom = 430.0
+text = "but but"
